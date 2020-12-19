@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+</head>
+
+
+<body>
+    <h1>Model Data Retreive and Show to User</h1>
+ {% if stu %}
+  <h2>Data Showing</h>
+  <h3>{{stu}}</h3>
+  
+  <table>
+      <tr>
+      <th>ID:</th>
+      <th>StuID:</th>
+      <th>Name:</th>
+      <th>Email:</th>
+      <th>Pass:</th>
+      </tr>
+     
+      {% for st in stu %} 
+        <tr>
+        <td>{{st.id}}</td>
+        <td>{{st.stuid}}</td>
+        <td>{{st.stuname}}</td>
+        <td> {{st.stuemail}}</td>
+        <td>{{st.stupass}}</td>
+        </tr>
+      {% endfor %}
+  </table>
+
+
+
+ {% else %}
+   <h3>NO Data</h3>
+ {% endif %}
+
+</body>
+</html>
